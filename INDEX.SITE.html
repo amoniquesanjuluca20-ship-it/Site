@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100SOLUÇÕES</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: white;
+            padding: 15px 40px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000 !important;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background: #f8f9fa;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+        .hero-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #000, #444);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+        .hero-btn:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* SERVIÇOS */
+        .services {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .service-box {
+            border: 1px solid #eee;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+           box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .service-box:hover { 
+            transform: translateY(-10px);
+            transform: translateY(-12px) scale(1.02);
+        }
+
+        .service-box h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .service-box ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        /* SOBRE */
+        .about {
+            background: #f8f9fa;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        /* CONTACTOS */
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* QR CODE */
+        .qr-code {
+            margin-top: 40px;
+        }
+
+        .qr-code img {
+            width: 180px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* FOOTER */
+        footer {
+    background: linear-gradient(135deg, #000, #222);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95rem;
+}
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        @media(max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">100SOLUÇÕES</a>
+        <div class="ms-auto">
+            <a class="btn btn-outline-dark me-2" href="#serviços">
+                Serviços
+                </a>
+                <a class="btn btn-outline-dark me-2" href="#about">
+                    Sobre
+                    </a> 
+                    <a class="btn btn-dark" href="#contactos">
+                        Contactos
+                        </a>
+                        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <h1>Soluções completas para o seu espaço</h1>
+
+            <p>
+                Uma empresa especializada em serviços técnicos,
+                manutenção e remodelação.
+                Atuamos com rigor, profissionalismo e dedicação total
+                para garantir a qualidade e valorização do seu imóvel.
+            </p>
+
+            <a href="#servicos" class="hero-btn">Conhecer Serviços</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="imagens/fundo.jpg.jpeg" alt="100SOLUÇÕES">
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="servicos">
+
+    <div class="section-title">
+        <h2>Os Nossos Serviços</h2>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- LIMPEZA -->
+            <div class="col-lg-6">
+                <div class="service-box">
+                    <h3><i class="fa-solid fa-soap"></i> Limpeza Técnica e Profissional</h3>
+
+                    <ul>
+                        <li>LT01 — Limpeza de telhados</li>
+                        <li>LT02 — Limpeza de algerozes</li>
+                        <li>LT03 — Limpeza pós-obra</li>
+                        <li>LT04 — Limpeza de cozinhas industriais/comerciais</li>
+                        <li>LT05 — Limpeza de fachadas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PINTURA -->
+            <div class="col-lg-6">
+                <div class="service-box">
+                    <h3><i class="fa-solid fa-paint-roller"></i> Pintura e Reparações</h3>
+
+                    <ul>
+                        <li>PR01 — Pintura de interiores</li>
+                        <li>PR02 — Pintura de exteriores</li>
+                        <li>PR03 — Tratamento de humidade</li>
+                        <li>PR04 — Reparação de fissuras</li>
+                        <li>PR05 — Reparações em paredes e tetos</li>
+                        <li>PR06 — Regularização de paredes</li>
+                        <li>PR07 — Impermeabilização de superfícies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PLADUR -->
+            <div class="col-lg-6">
+                <div class="service-box">
+                    <h3><i class="fa-solid fa-hammer"></i> Acabamentos em Pladur e Madeira</h3>
+
+                    <ul>
+                        <li>PM01 — Montagem de paredes em pladur</li>
+                        <li>PM02 — Tetos falsos</li>
+                        <li>PM03 — Construção de divisórias</li>
+                        <li>PM04 — Revestimentos decorativos</li>
+                        <li>PM05 — Carpintaria e portas</li>
+                        <li>PM06 — Rodapés</li>
+                        <li>PM07 — Mobiliário por medida</li>
+                        <li>PM08 — Pergolados em madeira</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- OBRAS -->
+            <div class="col-lg-6">
+                <div class="service-box">
+                    <h3><i class="fa-solid fa-building"></i> Pequenas Obras e Projetos</h3>
+
+                    <ul>
+                        <li>OB01 — Remodelações gerais</li>
+                        <li>OB02 — Isolamento térmico</li>
+                        <li>OB03 — Isolamento acústico</li>
+                        <li>OB04 — Substituição de equipamentos</li>
+                        <li>OB05 — Instalação de equipamentos</li>
+                        <li>OB06 — Projetos de interiores</li>
+                        <li>OB07 — Projetos exteriores</li>
+                        <li>OB08 — Paisagismo</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about">
+    <div class="container">
+
+        <h2>Sobre a 100SOLUÇÕES</h2>
+
+        <p>
+            A 100SOLUÇÕES é uma empresa focada em serviços técnicos,
+            remodelação, manutenção e valorização de imóveis.
+            Trabalhamos com profissionalismo, organização e atenção aos detalhes,
+            oferecendo soluções modernas e eficientes para clientes residenciais,
+            comerciais e empresariais.
+        </p>
+
+    </div>
+</section>
+
+<!-- CONTACTOS -->
+<section class="contact">
+    <div class="container">
+
+        <h2>Contactos</h2>
+
+        <p><strong>Telefone:</strong> +351 963 150 558</p>
+        <p><strong>Email:</strong> 100.solucoesmarcacao@gmail.com</p>
+        <p><strong>Localização:</strong> Viseu - Rua dos Deficientes das Forças Armadas, Lote 6, 1.º Frente</p>
+
+        <!-- QR CODE -->
+        <div class="qr-code">
+            <h4>Fale connosco no WhatsApp</h4>
+            <img src="imagens/qrcode.png.png" alt="QR Code WhatsApp">
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 100SOLUÇÕES — Todos os direitos reservados</p>
+</footer>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/351963150558" class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

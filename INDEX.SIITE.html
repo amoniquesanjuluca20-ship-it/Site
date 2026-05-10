@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100SOLUÇÕES</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 18px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #111 !important;
+        }
+
+        .navbar .btn {
+            border-radius: 30px;
+            padding: 10px 22px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 30px 80px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+            url('imagens/fundo.jpg.jpeg') center/cover no-repeat;
+            z-index: 1;
+            transform: scale(1.05);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: rgba(255,255,255,0.85);
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            background: white;
+            color: black;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            background: #eaeaea;
+        }
+
+        .hero-btn-dark {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+        }
+
+        .hero-btn-dark:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(14px);
+            border-radius: 30px;
+            padding: 40px;
+            color: white;
+        }
+
+        .hero-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-card p {
+            line-height: 1.8;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 120px 20px;
+            background: #f7f8fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            height: 100%;
+            transition: 0.4s;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+        }
+
+        .service-box:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .service-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .service-box i {
+            margin-right: 10px;
+            color: #111;
+        }
+
+        .service-box ul {
+            padding-left: 20px;
+            line-height: 2.1;
+            color: #555;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 120px 20px;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #555;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 120px 20px;
+            background: #0f1115;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .qr-code {
+            margin-top: 50px;
+        }
+
+        .qr-code img {
+            width: 190px;
+            border-radius: 20px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #08090b;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        @media(max-width: 950px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .hero {
+                padding-top: 160px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            100SOLUÇÕES
+        </a>
+
+        <div class="ms-auto d-flex gap-2 flex-wrap">
+
+            <a class="btn btn-outline-dark" href="#servicos">
+                Serviços
+            </a>
+
+            <a class="btn btn-outline-dark" href="#about">
+                Sobre
+            </a>
+
+            <a class="btn btn-dark" href="#contactos">
+                Contactos
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <h1>
+                Soluções completas para o seu espaço.
+            </h1>
+
+            <p>
+                Especialistas em remodelação, manutenção,
+                limpeza técnica, pintura, pladur e projetos.
+                Atuamos com rigor, profissionalismo e dedicação
+                total para valorizar o seu imóvel.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#servicos" class="hero-btn">
+                    Ver Serviços
+                </a>
+
+                <a href="#contactos" class="hero-btn hero-btn-dark">
+                    Contactar
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h3>
+                100SOLUÇÕES
+            </h3>
+
+            <p>
+                Empresa especializada em serviços técnicos,
+                manutenção e remodelação de imóveis,
+                oferecendo soluções modernas, eficientes
+                e de alto padrão para clientes residenciais
+                e empresariais.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Os Nossos Serviços</h2>
+            <p>Qualidade, rigor técnico e acabamento profissional.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="service-box">
+
+                    <h3>
+                        <i class="fa-solid fa-soap"></i>
+                        Limpeza Técnica
+                    </h3>
+
+                    <ul>
+                        <li>Limpeza de telhados</li>
+                        <li>Limpeza de algerozes</li>
+                        <li>Limpeza pós-obra</li>
+                        <li>Limpeza industrial/comercial</li>
+                        <li>Limpeza de fachadas</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="service-box">
+
+                    <h3>
+                        <i class="fa-solid fa-paint-roller"></i>
+                        Pintura e Reparações
+                    </h3>
+
+                    <ul>
+                        <li>Pintura interior e exterior</li>
+                        <li>Tratamento de humidade</li>
+                        <li>Reparação de fissuras</li>
+                        <li>Impermeabilização</li>
+                        <li>Regularização de paredes</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="service-box">
+
+                    <h3>
+                        <i class="fa-solid fa-hammer"></i>
+                        Pladur e Carpintaria
+                    </h3>
+
+                    <ul>
+                        <li>Paredes em pladur</li>
+                        <li>Tetos falsos</li>
+                        <li>Divisórias</li>
+                        <li>Portas e rodapés</li>
+                        <li>Mobiliário por medida</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="service-box">
+
+                    <h3>
+                        <i class="fa-solid fa-building"></i>
+                        Remodelação e Projetos
+                    </h3>
+
+                    <ul>
+                        <li>Remodelações gerais</li>
+                        <li>Isolamento térmico</li>
+                        <li>Isolamento acústico</li>
+                        <li>Projetos interiores</li>
+                        <li>Paisagismo</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <h2>Sobre a 100SOLUÇÕES</h2>
+
+        <p>
+            A 100SOLUÇÕES atua nas áreas de remodelação,
+            manutenção técnica e valorização de imóveis.
+            Trabalhamos com profissionalismo, inovação e
+            atenção aos detalhes para entregar resultados
+            modernos, elegantes e duradouros.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contactos">
+
+    <div class="container">
+
+        <h2>Entre em Contacto</h2>
+
+        <p><strong>Telefone:</strong> +351 963 150 558</p>
+        <p><strong>Email:</strong> 100.solucoesmarcacao@gmail.com</p>
+        <p><strong>Localização:</strong> Viseu — Rua dos Deficientes das Forças Armadas, Lote 6</p>
+
+        <div class="qr-code">
+            <img src="imagens/qrcode.png.png" alt="QR Code WhatsApp">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 100SOLUÇÕES — Todos os direitos reservados.
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/351963150558" class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
