@@ -45,8 +45,10 @@
             transition: all 0.3s ease;
         }
 
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; color: var(--primary-color) !important; display: flex; align-items: center; gap: 10px; }
-        .navbar-brand i { color: var(--accent-color); }
+        .navbar-brand { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; color: var(--primary-color) !important; display: flex; align-items: center; gap: 0; text-decoration: none; line-height: 1; }
+        .navbar-brand .logo-100 { color: var(--accent-color); font-size: 2rem; font-weight: 900; letter-spacing: -2px; }
+        .navbar-brand .logo-sol { color: var(--primary-color); font-weight: 800; letter-spacing: -1px; }
+        .navbar-brand .logo-dot { display: inline-block; width: 7px; height: 7px; background: var(--accent-color); border-radius: 50%; margin: 0 3px 2px 3px; vertical-align: middle; }
         .navbar .btn { border-radius: 50px; padding: 10px 24px; font-weight: 600; transition: all 0.3s ease; }
         .btn-outline-dark { border: 2px solid var(--primary-color); color: var(--primary-color); }
         .btn-outline-dark:hover { background: var(--primary-color); color: white; transform: translateY(-2px); }
@@ -178,8 +180,11 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-duration="800">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <i class="fa-solid fa-helmet-safety"></i> 100SOLUÇÕES
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html" style="text-decoration: none;">
+            <img src="imagens/fundo.jpg.jpeg" alt="Logo" style="max-height: 50px; width: auto; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+            <div class="d-flex align-items-center">
+                <span style="font-weight: 900; font-size: 1.6rem; letter-spacing: -1px; color: var(--primary-color);">100<span style="color: var(--accent-color);">SOLUÇÕES</span></span>
+            </div>
         </a>
         <div class="ms-auto d-flex gap-2 flex-wrap">
             <a class="btn btn-outline-dark" href="index.html#servicos">Serviços</a>
@@ -230,7 +235,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-box">
                     <div class="service-img-container">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1000&auto=format&fit=crop" alt="Limpeza Técnica">
+                        <img src="imagens/limpeza1.jpg.jpeg" alt="Limpeza Técnica">
                     </div>
                     <div class="service-content">
                         <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
@@ -249,7 +254,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-box">
                     <div class="service-img-container">
-                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop" alt="Pintura e Reparações">
+                        <img src="imagens/pladur1.jpg.jpeg" alt="Pintura e Reparações">
                     </div>
                     <div class="service-content">
                         <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
@@ -268,11 +273,11 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-box">
                     <div class="service-img-container">
-                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1000&auto=format&fit=crop" alt="Pladur e Carpintaria">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1000&auto=format&fit=crop" alt="Acabamentos em Pladur e Madeira">
                     </div>
                     <div class="service-content">
                         <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
-                        <h3>Pladur e Carpintaria</h3>
+                        <h3>Acabamentos em Pladur e Madeira</h3>
                         <ul>
                             <li><i class="fa-solid fa-check"></i> Paredes divisórias em pladur</li>
                             <li><i class="fa-solid fa-check"></i> Tetos falsos com iluminação embutida</li>
@@ -290,13 +295,13 @@
                         <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop" alt="Remodelação e Projetos">
                     </div>
                     <div class="service-content">
-                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
-                        <h3>Remodelação e Projetos</h3>
+                        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+                        <h3>Designer de Interiores e Paisagismo</h3>
                         <ul>
-                            <li><i class="fa-solid fa-check"></i> Remodelações completas (chave na mão)</li>
-                            <li><i class="fa-solid fa-check"></i> Isolamento térmico (Capoto/ETICS)</li>
-                            <li><i class="fa-solid fa-check"></i> Isolamento acústico especializado</li>
-                            <li><i class="fa-solid fa-check"></i> Projetos de interiores e paisagismo</li>
+                            <li><i class="fa-solid fa-check"></i> Projetos 3D e visualização de espaços</li>
+                            <li><i class="fa-solid fa-check"></i> Consultoria de decoração e mobiliário</li>
+                            <li><i class="fa-solid fa-check"></i> Otimização e planeamento de ambientes</li>
+                            <li><i class="fa-solid fa-check"></i> Criação e manutenção de espaços verdes</li>
                         </ul>
                     </div>
                 </div>
